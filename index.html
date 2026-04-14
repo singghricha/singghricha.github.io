@@ -1,14 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>whatsapp-project</title>
-    <script type="module" crossorigin src="/assets/index-CliHAO57.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B5eM4-5t.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button id="all" onclick="tab('con')" type="submit">All</button>
+    <button id="red" style="background-color: red;" onclick="tab('con1')" type="submit">Red</button>
+    <button id="green" style="background-color: green;" onclick="tab('con2')" type="submit">Green</button>
+    <button id="yellow" style="background-color: yellow;" onclick="tab('con3')"type="submit">Yellow</button>
+   <div class="container" id="con"> 
+    
+   
+    <div class="container" id="con1"> 
+    <div class="card" >1</div>
+    <div class="card" >2</div>
+    <div class="card" >3</div>
+    </div>
+    <div class="container" id="con2"> 
+    <div class="card" >4</div>
+    <div class="card" >5</div>
+    <div class="card" >6</div>
+    </div>
+    <div class="container" id="con3"> 
+    <div class="card" >7</div>
+    <div class="card" >8</div>
+    <div class="card" >9</div>
+    </div>
+    </div>
+    
+    <script>
+        function tab(data){
+          if(data=='con'){
+            document.getElementById('con').style.display="block";
+            
+           
+          }
+          else if(data=="con1"){
+           document.getElementById('con1').style.display="flex";
+            document.getElementById('con2').style.display="none";
+            document.getElementById('con3').style.display="none";
+          }
+          else if(data=='con2'){
+           document.getElementById('con1').style.display="none";
+            document.getElementById('con2').style.display="flex";
+            document.getElementById('con3').style.display="none";
+          }
+          else if(data=='con3'){
+           document.getElementById('con1').style.display="none";
+            document.getElementById('con2').style.display="none";
+            document.getElementById('con3').style.display="flex";
+          }
+        }
+    </script>
+</body>
 </html>
